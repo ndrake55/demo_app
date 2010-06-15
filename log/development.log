@@ -1,0 +1,833 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100613042923)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100613042923')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100613042923)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-12 21:35:43) [GET]
+
+ActionController::RoutingError (No route matches "/demo_app" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-12 21:36:48) [GET]
+
+ActionController::RoutingError (No route matches "/demo_app" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100613042923)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-06-12 21:37:19) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 468ms (View: 73, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-12 21:37:33) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 510ms (View: 498, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-06-12 21:37:42) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 29ms (View: 20, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-12 21:37:54) [POST]
+  Parameters: {"user"=>{"name"=>"Neal Drake", "email"=>"ndrake55@gmail.com"}, "commit"=>"Create", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg="}
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO "users" ("name", "updated_at", "email", "created_at") VALUES('Neal Drake', '2010-06-13 04:37:54', 'ndrake55@gmail.com', '2010-06-13 04:37:54')[0m
+Redirected to http://localhost:3000/users/1
+Completed in 206ms (DB: 2) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-12 21:37:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-12 21:38:00) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-06-12 21:51:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 33ms (View: 22, DB: 1) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-06-12 21:51:23) [PUT]
+  Parameters: {"user"=>{"name"=>"Neal T Drake", "email"=>"ndrake55@gmail.com"}, "commit"=>"Update", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "id"=>"1"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "name" = 'Neal T Drake', "updated_at" = '2010-06-13 04:51:23' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 228ms (DB: 2) | 302 Found [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-12 21:51:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 133ms (View: 4, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-12 21:51:32) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-06-12 22:01:32) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-12 22:01:53) [POST]
+  Parameters: {"user"=>{"name"=>"Tom Jones", "email"=>"tom@drakeearth.com"}, "commit"=>"Create", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg="}
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "updated_at", "email", "created_at") VALUES('Tom Jones', '2010-06-13 05:01:53', 'tom@drakeearth.com', '2010-06-13 05:01:53')[0m
+Redirected to http://localhost:3000/users/2
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-12 22:01:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-12 22:01:56) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-06-12 22:03:13) [DELETE]
+  Parameters: {"authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "id"=>"2"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/users
+Completed in 60ms (DB: 1) | 302 Found [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-12 22:03:13) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 18ms (View: 8, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-06-15 08:48:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 493ms (View: 371, DB: 0) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-06-15 08:48:37) [PUT]
+  Parameters: {"user"=>{"name"=>"Neal T Drake", "email"=>"ndrake55@gmail.com"}, "commit"=>"Update", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Redirected to http://localhost:3000/users/1
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-15 08:48:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 08:48:41) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 105ms (View: 21, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-06-15 09:18:29) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-15 09:23:47) [POST]
+  Parameters: {"user"=>{"name"=>"Bank of America", "email"=>"pain in ass"}, "commit"=>"Create", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg="}
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("name", "updated_at", "email", "created_at") VALUES('Bank of America', '2010-06-15 16:23:47', 'pain in ass', '2010-06-15 16:23:47')[0m
+Redirected to http://localhost:3000/users/3
+Completed in 224ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-15 09:23:47) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/users/3]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:23:50) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-15 09:23:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:24:00) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-06-15 09:24:03) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/users/3/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-06-15 09:24:06) [PUT]
+  Parameters: {"user"=>{"name"=>"Bank of America", "email"=>"pain in ass"}, "commit"=>"Update", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "id"=>"3"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Redirected to http://localhost:3000/users/3
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/users/3]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-15 09:24:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/users/3]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:24:10) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-06-15 09:24:15) [DELETE]
+  Parameters: {"authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "id"=>"3"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Destroy (0.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/users
+Completed in 178ms (DB: 1) | 302 Found [http://localhost/users/3]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:24:15) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-15 09:24:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 15ms (View: 5, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-06-15 09:24:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:24:29) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-06-15 09:26:30) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 43ms (View: 33, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-15 09:26:43) [POST]
+  Parameters: {"user"=>{"name"=>"Freek show", "email"=>"fads@akjf.com"}, "commit"=>"Create", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg="}
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "updated_at", "email", "created_at") VALUES('Freek show', '2010-06-15 16:26:43', 'fads@akjf.com', '2010-06-15 16:26:43')[0m
+Redirected to http://localhost:3000/users/4
+Completed in 88ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-15 09:26:43) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/users/4]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:26:49) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-15 09:26:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=2):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-06-15 09:27:15) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-06-15 09:27:20) [POST]
+  Parameters: {"user"=>{"name"=>"kjahdf;kajd", "email"=>"kjb;kjb;ik"}, "commit"=>"Create", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg="}
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("name", "updated_at", "email", "created_at") VALUES('kjahdf;kajd', '2010-06-15 16:27:20', 'kjb;kjb;ik', '2010-06-15 16:27:20')[0m
+Redirected to http://localhost:3000/users/5
+Completed in 457ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-15 09:27:21) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 15ms (View: 5, DB: 0) | 200 OK [http://localhost/users/5]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-06-15 09:27:27) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 24ms (View: 11, DB: 0) | 200 OK [http://localhost/users/5/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:27:36) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100613042923)
+Migrating to CreateMicroposts (20100615165055)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100615165055')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-06-15 09:51:37) [DELETE]
+  Parameters: {"authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "id"=>"5"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 5[0m
+Redirected to http://localhost:3000/users
+Completed in 41ms (DB: 1) | 302 Found [http://localhost/users/5]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:51:37) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-06-15 09:51:41) [DELETE]
+  Parameters: {"authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "id"=>"4"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Destroy (1.0ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/users
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/users/4]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:51:42) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 45ms (View: 36, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-06-15 09:51:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:51:52) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 09:51:55) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 45ms (View: 36, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-06-15 09:52:32) [GET]
+  [4;35;1mMicropost Load (0.0ms)[0m   [0mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-06-15 09:56:32) [GET]
+  [4;36;1mMicropost Load (0.0ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2010-06-15 09:56:34) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 26ms (View: 16, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2010-06-15 09:56:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "micropost"=>{"content"=>"First micropost", "user_id"=>"1"}}
+  [4;35;1mMicropost Create (1.0ms)[0m   [0mINSERT INTO "microposts" ("updated_at", "content", "user_id", "created_at") VALUES('2010-06-15 16:56:47', 'First micropost', 1, '2010-06-15 16:56:47')[0m
+Redirected to http://localhost:3000/microposts/1
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/microposts]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-06-15 09:56:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMicropost Load (1.0ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://localhost/microposts/1]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-06-15 09:56:51) [GET]
+  [4;35;1mMicropost Load (0.0ms)[0m   [0mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2010-06-15 09:57:56) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 21ms (View: 11, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2010-06-15 09:58:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "micropost"=>{"content"=>"Second Micro Post", "user_id"=>"1"}}
+  [4;36;1mMicropost Create (1.0ms)[0m   [0;1mINSERT INTO "microposts" ("updated_at", "content", "user_id", "created_at") VALUES('2010-06-15 16:58:12', 'Second Micro Post', 1, '2010-06-15 16:58:12')[0m
+Redirected to http://localhost:3000/microposts/2
+Completed in 20ms (DB: 1) | 302 Found [http://localhost/microposts]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-06-15 09:58:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMicropost Load (0.0ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/microposts/2]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-06-15 09:58:15) [GET]
+  [4;36;1mMicropost Load (0.0ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 21ms (View: 11, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-06-15 13:08:07) [GET]
+  Parameters: {"id"=>"2"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/micropost.rb:2:in `maximum'
+  app/models/micropost.rb:2
+  app/controllers/microposts_controller.rb:37:in `edit'
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MicropostsController#destroy (for 127.0.0.1 at 2010-06-15 13:08:13) [DELETE]
+  Parameters: {"authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "id"=>"2"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/micropost.rb:2:in `maximum'
+  app/models/micropost.rb:2
+  app/controllers/microposts_controller.rb:75:in `destroy'
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-06-15 13:08:47) [GET]
+  Parameters: {"id"=>"2"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/micropost.rb:2:in `maximum'
+  app/models/micropost.rb:2
+  app/controllers/microposts_controller.rb:37:in `edit'
+
+Rendered rescues/_trace (128.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100613042923)
+Migrating to CreateMicroposts (20100615165055)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100613042923)
+Migrating to CreateMicroposts (20100615165055)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-06-15 13:12:53) [GET]
+  Parameters: {"id"=>"1"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/micropost.rb:2:in `maximum'
+  app/models/micropost.rb:2
+  app/controllers/microposts_controller.rb:37:in `edit'
+
+Rendered rescues/_trace (116.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2010-06-15 13:12:58) [GET]
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/micropost.rb:2:in `maximum'
+  app/models/micropost.rb:2
+  app/controllers/microposts_controller.rb:27:in `new'
+
+Rendered rescues/_trace (51.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 13:13:07) [GET]
+
+ActionController::RoutingError (No route matches "/user" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100613042923)
+Migrating to CreateMicroposts (20100615165055)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 13:14:41) [GET]
+
+ActionController::RoutingError (No route matches "/user" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 13:16:43) [GET]
+
+ActionController::RoutingError (No route matches "/user" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 13:16:58) [GET]
+
+ActionController::RoutingError (No route matches "/user" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-15 13:17:36) [GET]
+
+ActionController::RoutingError (No route matches "/user" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-06-15 13:17:43) [GET]
+  [4;36;1mMicropost Load (1.0ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 115ms (View: 99, DB: 1) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-06-15 13:17:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMicropost Load (0.0ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/edit
+Completed in 28ms (View: 18, DB: 0) | 200 OK [http://localhost/microposts/1/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-06-15 13:17:54) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 40ms (View: 21, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-06-15 13:18:14) [GET]
+  Parameters: {"id"=>"2"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/micropost.rb:2:in `maximum'
+  app/models/micropost.rb:2
+  app/controllers/microposts_controller.rb:37:in `edit'
+
+Rendered rescues/_trace (51.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-06-15 13:18:23) [GET]
+  Parameters: {"id"=>"1"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/micropost.rb:2:in `maximum'
+  app/models/micropost.rb:2
+  app/controllers/microposts_controller.rb:37:in `edit'
+
+Rendered rescues/_trace (117.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-06-15 13:18:27) [GET]
+  Parameters: {"id"=>"1"}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/micropost.rb:2:in `maximum'
+  app/models/micropost.rb:2
+  app/controllers/microposts_controller.rb:16:in `show'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-06-15 13:18:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMicropost Load (0.0ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/edit
+Completed in 22ms (View: 11, DB: 0) | 200 OK [http://localhost/microposts/1/edit]
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-06-15 13:19:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMicropost Load (0.0ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+Rendering template within layouts/microposts
+Rendering microposts/edit
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://localhost/microposts/2/edit]
+
+
+Processing MicropostsController#update (for 127.0.0.1 at 2010-06-15 13:20:04) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "micropost"=>{"content"=>";lkjsfdng;kjsnfdgkj;dgnskdjfgnsd;kjfs;kljng;sdlfkng;ksdfng;lsfdng;lsfadng;lsfnga;lnga;sdlngasdkjnfasdkjnfa;kjnf;ljsad;knf;lasnsdflanssdlfnasdlnflsadlnflasdnfl;lsadnf;lasndflasdnf;asldknf;alsdknfas;dlnfa;sdlnfa;lsdnfa;sdklnfadsfasdfasdfasddfasdfsadfasdghffadga", "user_id"=>"1"}, "id"=>"2"}
+  [4;35;1mMicropost Load (0.0ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+Rendering template within layouts/microposts
+Rendering microposts/edit
+Completed in 28ms (View: 14, DB: 0) | 200 OK [http://localhost/microposts/2]
+
+
+Processing MicropostsController#update (for 127.0.0.1 at 2010-06-15 13:20:26) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"oyk5iKDIf5YKf9WkKHRrkPm55DasojB4ZbnyXhbI6bg=", "micropost"=>{"content"=>"Validate works", "user_id"=>"1"}, "id"=>"2"}
+  [4;36;1mMicropost Load (0.0ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+  [4;35;1mMicropost Update (1.0ms)[0m   [0mUPDATE "microposts" SET "content" = 'Validate works', "updated_at" = '2010-06-15 20:20:26' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/microposts/2
+Completed in 58ms (DB: 1) | 302 Found [http://localhost/microposts/2]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2010-06-15 13:20:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMicropost Load (1.0ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 23ms (View: 9, DB: 1) | 200 OK [http://localhost/microposts/2]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2010-06-15 13:20:29) [GET]
+  [4;35;1mMicropost Load (1.0ms)[0m   [0mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2010-06-15 13:23:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMicropost Load (0.0ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/edit
+Completed in 313ms (View: 13, DB: 0) | 200 OK [http://localhost/microposts/1/edit]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mMicropost Load (1.0ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts".user_id = 1) [0m
